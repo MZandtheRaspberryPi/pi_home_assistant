@@ -112,7 +112,7 @@ scp darsh@10.0.0.110:/home/darsh/timelapse/2026-03-01_06-00-01.avi .
 
 On your output computer, use ffmpeg to convert it to an mp4. In testing, converion on the raspberry pi didn't work well though this could probably be resolved with more testing...
 ```
-ffmpeg -i /home/darsh/timelapse/2026-03-01_06-00-01.avi -strict -2 /home/darsh/timelapse/2026-03-01_06-00-01.avi.mp4
+ffmpeg -i /home/student/2026-03-01_06-00-01.avi -c:v libx264 -crf 23 -c:a aac -pix_fmt yuv420p /home/student/2026-03-01_06-00-01.avi.mp4
 ```
 
 ### seeing camera settings
